@@ -76,6 +76,3 @@ class Brasileiro:
                 self._df.to_csv(f"{file_name}.{file_format}", index=False)
         except AttributeError:
             print(None)
-
-a = Brasileiro(2014, "b")
-a.save_data("a", file_format="csv")
