@@ -42,23 +42,23 @@ class Brasileiro:
         all_points = [x for x in map(get_number_data, soup.find_all(name="td"))
                       if x is not None]
 
-        data = []
+        values = []
         for n in range(10, 201, 10):
-            data.append(all_points[0 if n == 10 else n - 10: n])
+            values.append(all_points[0 if n == 10 else n - 10: n])
 
         self._df = pd.DataFrame({"Position": range(1, self._teams + 1),
                                  "Teams": ranks,
                                  "Points": points,
-                                 "Games": [value[0] for value in data],
-                                 "Wins": [value[1] for value in data],
-                                 "Draws": [value[2] for value in data],
-                                 "Defeats": [value[3] for value in data],
-                                 "Scored Goals": [value[4] for value in data],
-                                 "Against Goals": [value[5] for value in data],
-                                 "Goal Balance": [value[6] for value in data],
-                                 "Yellow Cards": [value[7] for value in data],
-                                 "Red Cards": [value[8] for value in data],
-                                 "Points %": [value[9] for value in data]})
+                                 "Games": [val[0] for val in values],
+                                 "Wins": [val[1] for val in values],
+                                 "Draws": [val[2] for val in values],
+                                 "Defeats": [val[3] for val in values],
+                                 "Scored Goals": [val[4] for val in values],
+                                 "Against Goals": [val[5] for val in values],
+                                 "Goal Balance": [val[6] for val in values],
+                                 "Yellow Cards": [val[7] for val in values],
+                                 "Red Cards": [val[8] for val in values],
+                                 "Points %": [val[9] for val in values]})
 
     def show_data(self):
         try:
