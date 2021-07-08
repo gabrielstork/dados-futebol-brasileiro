@@ -50,5 +50,5 @@ brasileirao_2018.get_data()
 Salvando os dados. Por padrão, `.xlsx` é o formato do arquivo.
 
 ```python
-brasileirao_2018.save_data("dados_br_2017", file_format="csv")
+brasileirao_2018.save_data("dados_br_2018", file_format="csv")
 ```

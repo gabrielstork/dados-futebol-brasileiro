@@ -11,9 +11,7 @@ def get_number_data(is_data):
 
 
 class Brasileiro:
-    def __init__(self,
-                 year,
-                 series):
+    def __init__(self, year, series):
 
         if type(year) is not int:
             raise TypeError("year value must be 'int'")
@@ -47,7 +45,7 @@ class Brasileiro:
             values.append(all_points[0 if n == 10 else n - 10: n])
 
         self._df = pd.DataFrame({"Position": range(1, self._teams + 1),
-                                 "Teams": ranks,
+                                 "Team": ranks,
                                  "Points": points,
                                  "Games": [val[0] for val in values],
                                  "Wins": [val[1] for val in values],
