@@ -1,10 +1,10 @@
 # dados-futebol-brasileiro :soccer:
 
-![Exemplo de Planilha](https://github.com/gabrielstork/dados-futebol-brasileiro/blob/main/images/xlsx_file_example.PNG)
+![Exemplo](https://github.com/gabrielstork/dados-futebol-brasileiro/blob/main/images/xlsx_file_example.PNG)
 
 ## O que é?
 
-Criado por [Gabriel Stork](https://github.com/gabrielstork), até o momento, esse repositório coleta dados permitidamente (como pode ser visto [aqui](https://www.cbf.com.br/robots.txt)) do site oficial da CBF (Confederação Brasileira de Futebol).
+Criado por [Gabriel Stork](https://github.com/gabrielstork), até o momento, esse repositório coleta dados de forma permitida (como pode ser visto [aqui](https://www.cbf.com.br/robots.txt)) do site oficial da CBF (Confederação Brasileira de Futebol).
 
 ## Como utilizar?
 

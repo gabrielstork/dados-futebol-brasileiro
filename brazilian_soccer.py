@@ -61,10 +61,21 @@ class Brasileiro:
                                  "Points %": [value[9] for value in data]})
 
     def show_data(self):
-        self._df.head(self._teams)
+        try:
+            return self._df.head(self._teams)
+        except AttributeError:
+            print(None)
 
     def save_data(self, file_name, file_format="xlsx"):
-        if file_format == "xlsx":
-            self._df.to_excel(f"{file_name}.{file_format}", index=False)
-        elif file_format == "csv":
-            self._df.to_csv(f"{file_name}.{file_format}", index=False)
+        if file_format not in ["xlsx", "csv"]:
+            raise ValueError("available file formats: 'xlsx' and 'csv'")
+        try:
+            if file_format == "xlsx":
+                self._df.to_excel(f"{file_name}.{file_format}", index=False)
+            elif file_format == "csv":
+                self._df.to_csv(f"{file_name}.{file_format}", index=False)
+        except AttributeError:
+            print(None)
+
+a = Brasileiro(2014, "b")
+a.save_data("a", file_format="csv")
