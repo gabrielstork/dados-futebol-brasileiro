@@ -12,7 +12,6 @@ def get_number_data(is_data):
 
 class Brasileiro:
     def __init__(self, year, series):
-
         if type(year) is not int:
             raise TypeError("year value must be 'int'")
         elif year < 2012:
@@ -20,13 +19,13 @@ class Brasileiro:
         elif series.lower() not in ["a", "b"]:
             raise ValueError("series must be 'A' or 'B'")
 
-        self._year = year
-        self._teams = 20
-        self._series = series.lower()
+        self.year = year
+        self.teams = 20
+        self.series = series.lower()
 
     def get_data(self):
         url = ("https://www.cbf.com.br/futebol-brasileiro/competicoes/"
-               f"campeonato-brasileiro-serie-{self._series}/{self._year}")
+               f"campeonato-brasileiro-serie-{self.series}/{self.year}")
         table = requests.get(url)
         soup = BeautifulSoup(table.content, "html.parser")
 
@@ -44,7 +43,7 @@ class Brasileiro:
         for n in range(10, 201, 10):
             values.append(all_points[0 if n == 10 else n - 10: n])
 
-        self._df = pd.DataFrame({"Position": range(1, self._teams + 1),
+        self._df = pd.DataFrame({"Position": range(1, self.teams + 1),
                                  "Team": ranks,
                                  "Points": points,
                                  "Games": [val[0] for val in values],
@@ -60,7 +59,7 @@ class Brasileiro:
 
     def show_data(self):
         try:
-            return self._df.head(self._teams)
+            return self._df.head(self.teams)
         except AttributeError:
             print(None)
 

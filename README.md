@@ -14,16 +14,10 @@ Antes de tudo, você deve clonar esse repositório para a sua máquina local, um
 git clone https://github.com/gabrielstork/dados-futebol-brasileiro.git
 ```
 
-Após clonar o repositório, caso você não tenha as bibliotecas necessárias (listadas no arquivo `requirements.txt`), digite em seu terminal, de acordo com a sua necessidade:
+Após clonar o repositório, caso você não tenha as bibliotecas necessárias (listadas no arquivo `requirements.txt`), digite em seu terminal:
 
 ```sh
-pip install requests
-```
-```sh
-pip install pandas
-```
-```sh
-pip install bs4
+pip install -r requirements.txt
 ```
 
 Pronto! Agora você já pode utilizar o código!
