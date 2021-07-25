@@ -1,4 +1,4 @@
-# dados-futebol-brasileiro :soccer:
+# dados-futebol-brasileiro
 
 ![Exemplo](https://github.com/gabrielstork/dados-futebol-brasileiro/blob/main/images/xlsx_file_example.PNG)
 
@@ -8,7 +8,7 @@ Criado por [Gabriel Stork](https://github.com/gabrielstork), até o momento, ess
 
 ## Como utilizar?
 
-Antes de tudo, você deve clonar esse repositório para a sua máquina local, uma das maneiras é utilizando em seu terminal:
+Antes de tudo, você deve clonar esse repositório para a sua máquina local, uma das maneiras é copiando e colando em seu terminal:
 
 ```sh
 git clone https://github.com/gabrielstork/dados-futebol-brasileiro.git
@@ -17,6 +17,7 @@ git clone https://github.com/gabrielstork/dados-futebol-brasileiro.git
 Após clonar o repositório, caso você não tenha as bibliotecas necessárias (listadas no arquivo `requirements.txt`), digite em seu terminal:
 
 ```sh
+cd dados-futebol-brasileiro
 pip install -r requirements.txt
 ```
 
