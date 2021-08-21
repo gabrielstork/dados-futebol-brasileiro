@@ -1,10 +1,10 @@
 # dados-futebol-brasileiro
 
+Colete dados do site oficial da CBF (Confederação Brasileira de Futebol).
+
+[robots.txt](https://www.cbf.com.br/robots.txt)
+
 ![Exemplo](https://github.com/gabrielstork/dados-futebol-brasileiro/blob/main/images/xlsx_file_example.PNG)
-
-## O que é?
-
-Criado por [Gabriel Stork](https://github.com/gabrielstork), até o momento, esse repositório coleta dados de forma permitida (como pode ser visto [aqui](https://www.cbf.com.br/robots.txt)) do site oficial da CBF (Confederação Brasileira de Futebol).
 
 ## Como utilizar?
 
@@ -33,7 +33,7 @@ Existem duas maneiras para isso:
 Instanciando a classe.
 
 ```python
-brasileirao_2018 = Brasileiro(2018, "A")
+brasileirao_2018 = Brasileiro(2018, 'A')
 ```
 
 Obtendo os dados.
@@ -42,8 +42,8 @@ Obtendo os dados.
 brasileirao_2018.get_data()
 ```
 
-Salvando os dados. Por padrão, `.xlsx` é o formato do arquivo.
+Salvando os dados.
 
 ```python
-brasileirao_2018.save_data("dados_br_2018", file_format="csv")
+brasileirao_2018.save_data('brasileirao_2018.csv')
 ```
